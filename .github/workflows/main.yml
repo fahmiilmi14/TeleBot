@@ -2,7 +2,7 @@ name: Market Predictor Bot
 
 on:
   schedule:
-    - cron: '12 2,7,13,17 * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
