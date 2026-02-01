@@ -42,7 +42,7 @@ def get_market_analysis():
         url = f"https://api.telegram.org/bot{telegram_token}/sendMessage"
         payload = {
             "chat_id": chat_id,
-            "text": f"🔔 **FAHMI MARKET INTEL UPDATE**\n\n{report}",
+            "text": f"🔔 **IKI INTEL UPDATE**\n\n{report}",
             "parse_mode": "Markdown"
         }
         
