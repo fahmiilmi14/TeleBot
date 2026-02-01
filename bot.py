@@ -2,13 +2,16 @@ import os
 import requests
 from groq import Groq
 from tavily import TavilyClient
+from datetime import date
+
+hari_ini = date.today()
 
 def get_market_analysis():
     try:
         tavily = TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
         groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
         
-        query = "harga emas antam hari ini, poin IHSG terbaru, dan analisis ekonomi Indonesia terkini"
+        query = f"harga emas antam hari ini, poin IHSG terbaru, dan analisis ekonomi Indonesia terkini tanggal {hari_ini}"
         search_result = tavily.search(query=query, search_depth="advanced")
 
         prompt = f"""
